@@ -1,11 +1,29 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Logo } from "./logo"
+import Waves from "./Waves"
 
 export function Footer() {
+  const waveConfig = {
+    lineColor: "rgba(223, 255, 0, 0.2)",
+    backgroundColor: "transparent",
+    waveSpeedX: 0.01,
+    waveSpeedY: 0.004,
+    waveAmpX: 24,
+    waveAmpY: 12,
+    xGap: 10,
+    yGap: 20,
+    friction: 0.925,
+    tension: 0.005,
+    maxCursorMove: 80,
+  }
+
   return (
-    <footer className="w-full bg-black text-white border-t border-white/10">
-      <div className="container mx-auto px-4 md:px-6 py-16">
+    <footer className="relative w-full text-white border-t border-white/10 overflow-hidden bg-black">
+      <Waves {...waveConfig} />
+      <div className="relative z-10 container mx-auto px-4 md:px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Logo and Tagline */}
           <div className="md:col-span-2">
