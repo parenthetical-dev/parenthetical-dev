@@ -63,7 +63,7 @@ export function CoreValues() {
           className="max-w-3xl mx-auto text-center space-y-6 mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">Our Core Values</h2>
-          <p className="text-lg text-gray-400 font-semibold">Adding the essential context to every line of code.</p>
+          <p className="text-xl md:text-2xl text-gray-400 font-semibold">Adding the essential context to every line of code.</p>
           <p className="text-gray-300">
             Just as parentheses hold the quiet truths that complete a sentence, we believe the most important work
             happens in the spaces between—where technology meets humanity, where innovation meets empathy, where

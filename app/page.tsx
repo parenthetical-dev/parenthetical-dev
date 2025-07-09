@@ -5,6 +5,8 @@ import { ArrowDown } from "lucide-react"
 import { Header } from "@/components/header"
 import { CoreValues } from "@/components/core-values"
 import { OurWork } from "@/components/our-work"
+import { Footer } from "@/components/footer"
+import { CustomScroll } from "@/components/custom-scroll"
 
 export default function HomePage() {
   const config = {
@@ -23,14 +25,15 @@ export default function HomePage() {
 
   return (
     <main className="bg-black">
+      <CustomScroll />
       <Header />
       <div className="relative w-screen h-screen overflow-hidden">
         <Waves {...config} />
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
           <div>
             <Logo className="mb-4" />
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Harnessing AI to build digital spaces where humanity thrives.
+            <p className="text-2xl md:text-3xl font-light text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              Harnessing the power of artificial intelligence to build digital spaces where humanity thrives.
             </p>
           </div>
         </div>
@@ -44,6 +47,7 @@ export default function HomePage() {
       </div>
       <CoreValues />
       <OurWork />
+      <Footer />
     </main>
   )
 }
