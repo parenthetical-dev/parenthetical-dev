@@ -21,8 +21,10 @@ export function Footer() {
   }
 
   return (
-    <footer className="relative w-full text-white border-t border-white/10 overflow-hidden bg-black">
-      <Waves {...waveConfig} />
+    <footer className="relative w-full min-h-[400px] text-white border-t border-white/10 overflow-hidden bg-black">
+      <div className="absolute inset-0">
+        <Waves {...waveConfig} />
+      </div>
       <div className="relative z-10 container mx-auto px-4 md:px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Logo and Tagline */}

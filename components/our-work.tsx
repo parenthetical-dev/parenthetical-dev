@@ -13,7 +13,7 @@ const fadeInAnimation = {
 export function OurWork() {
   return (
     <>
-    <section className="w-full pt-20 pb-12 md:pt-32 md:pb-16 bg-black text-white border-t border-white/10 overflow-hidden">
+    <section id="our-work" className="w-full pt-20 pb-12 md:pt-32 md:pb-16 bg-black text-white border-t border-white/10 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           {...fadeInAnimation}
@@ -73,7 +73,7 @@ export function OurWork() {
           {/* CTA Buttons */}
           <motion.div 
             {...fadeInAnimation}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-20"
           >
                 <a 
                   href="https://survivalpending.com" 
@@ -303,7 +303,7 @@ export function OurWork() {
     </section>
 
     {/* Calling Developers Section */}
-    <section className="w-full py-20 md:py-32 bg-black text-white border-t border-white/10 overflow-hidden">
+    <section id="calling-developers" className="w-full py-20 md:py-32 bg-black text-white border-t border-white/10 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             {...fadeInAnimation}
@@ -416,10 +416,7 @@ export function OurWork() {
             <h3 className="text-2xl font-bold mb-6 text-white text-center">How to Contribute</h3>
             <div className="space-y-4 text-gray-300 mb-12">
               <p className="leading-relaxed">
-                Start where you are. Fix a bug. Improve documentation. Suggest a feature that serves someone you care about. Challenge us when our code doesn't match our conscience. Our GitHub isn't just a repository—it's a space for reimagining what technology can be when it's built with intention.
-              </p>
-              <p className="text-lg font-semibold text-gray-200">
-                Every pull request is a chance to add your parenthetical—your essential truth—to this larger story we're writing together. We don't need more rockstar developers. We need ensemble players who understand that the best code is written in community.
+                Start where you are. Fix a bug. Improve documentation. Suggest a feature that serves someone you care about. Challenge us when our code doesn't match our conscience. Our GitHub isn't just a repository—it's a space for reimagining what technology can be when it's built with intention. Every pull request is a chance to add your parenthetical—your essential truth—to this larger story we're writing together. We don't need more rockstar developers. We need ensemble players who understand that the best code is written in community.
               </p>
             </div>
 

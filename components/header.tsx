@@ -5,39 +5,13 @@ import Link from "next/link"
 import Image from "next/image"
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Logo } from "./logo"
 import { cn } from "@/lib/utils"
-import { Button } from "./ui/button"
-
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "AI-Powered Platforms",
-    href: "/work/ai-platforms",
-    description: "Scalable and intelligent platforms built for the future.",
-  },
-  {
-    title: "Interactive Experiences",
-    href: "/work/interactive-experiences",
-    description: "Engaging digital spaces that captivate and inspire users.",
-  },
-  {
-    title: "Brand Identity Systems",
-    href: "/work/branding",
-    description: "Crafting unique and memorable brand identities from the ground up.",
-  },
-  {
-    title: "Web & Mobile Applications",
-    href: "/work/apps",
-    description: "User-centric applications designed for performance and usability.",
-  },
-]
 
 export function Header() {
   return (
@@ -64,20 +38,16 @@ export function Header() {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-white hover:text-chartreuse hover:bg-transparent focus:bg-transparent focus:text-chartreuse data-[state=open]:bg-transparent data-[state=open]:text-chartreuse">
-                    Our Work
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="bg-black/90 backdrop-blur-lg border border-white/10 rounded-lg">
-                      <ul className="flex flex-col w-[400px] gap-1 p-4">
-                        {components.map((component) => (
-                          <ListItem key={component.title} title={component.title} href={component.href}>
-                            {component.description}
-                          </ListItem>
-                        ))}
-                      </ul>
-                    </div>
-                  </NavigationMenuContent>
+                  <Link href="/#our-work" legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        "bg-transparent text-white hover:text-chartreuse hover:bg-transparent focus:bg-transparent focus:text-chartreuse",
+                      )}
+                    >
+                      Our Work
+                    </NavigationMenuLink>
+                  </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link href="/about" legacyBehavior passHref>
@@ -91,14 +61,28 @@ export function Header() {
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/contact" legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        "bg-transparent text-white hover:text-chartreuse hover:bg-transparent focus:bg-transparent focus:text-chartreuse",
+                      )}
+                    >
+                      Get In Touch
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <Button
-              asChild
-              className="h-9 bg-white text-black hover:bg-chartreuse hover:text-black rounded-full font-bold px-5 transition-colors"
+            <Link
+              href="/#calling-developers"
+              className="group relative inline-flex items-center justify-center h-9 px-5 bg-chartreuse/20 backdrop-blur-md border border-chartreuse/50 text-chartreuse font-bold rounded-full hover:bg-chartreuse/30 hover:border-chartreuse/70 transition-all duration-300 hover:scale-105 shadow-xl"
             >
-              <Link href="/contact">Get In Touch</Link>
-            </Button>
+              <div className="absolute inset-0 bg-gradient-to-br from-chartreuse/10 via-transparent to-chartreuse/5 rounded-full" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-white/5 to-white/0 opacity-50 rounded-full" />
+              <span className="relative z-10">Contribute</span>
+            </Link>
           </div>
         </div>
       </div>
