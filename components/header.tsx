@@ -113,7 +113,7 @@ export function Header() {
                   <span className="sr-only">Toggle menu</span>
                 </button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-black border-chartreuse/20">
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-black border-chartreuse/20 flex flex-col h-full">
                 <SheetHeader>
                   <SheetTitle className="sr-only">Parenthetical Navigation Menu</SheetTitle>
                   <div className="flex items-center gap-3">
@@ -121,25 +121,25 @@ export function Header() {
                     <Logo size="sm" />
                   </div>
                 </SheetHeader>
-                <nav className="flex flex-col gap-4 mt-8">
+                <nav className="flex flex-col gap-3 mt-8">
                   <Link
                     href="/"
                     onClick={() => setIsOpen(false)}
-                    className="text-white hover:text-chartreuse transition-colors text-lg py-2"
+                    className="text-white hover:text-chartreuse transition-colors text-base py-2"
                   >
                     Home
                   </Link>
                   <Link
                     href="/#our-work"
                     onClick={() => setIsOpen(false)}
-                    className="text-white hover:text-chartreuse transition-colors text-lg py-2"
+                    className="text-white hover:text-chartreuse transition-colors text-base py-2"
                   >
                     Our Work
                   </Link>
                   <Link
                     href="/about"
                     onClick={() => setIsOpen(false)}
-                    className="text-white hover:text-chartreuse transition-colors text-lg py-2"
+                    className="text-white hover:text-chartreuse transition-colors text-base py-2"
                   >
                     About Us
                   </Link>
@@ -150,7 +150,45 @@ export function Header() {
                   >
                     <span className="relative z-10">Contribute</span>
                   </Link>
+                  <ContactModal
+                    trigger={
+                      <button 
+                        onClick={() => setIsOpen(false)}
+                        className="group relative inline-flex items-center justify-center h-10 px-5 bg-purple-500/20 backdrop-blur-md border border-purple-500/50 text-purple-300 font-bold rounded-full hover:bg-purple-500/30 hover:border-purple-500/70 transition-all duration-300 shadow-xl"
+                      >
+                        <span className="relative z-10">Get In Touch</span>
+                      </button>
+                    }
+                  />
                 </nav>
+                
+                {/* Footer Links */}
+                <div className="mt-auto pt-8 pb-6 border-t border-gray-800">
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <h4 className="text-chartreuse text-sm font-semibold">Connect</h4>
+                      <div className="flex gap-4">
+                        <a
+                          href="https://github.com/parenthetical-dev"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-400 hover:text-white transition-colors text-sm"
+                        >
+                          GitHub
+                        </a>
+                        <a
+                          href="#"
+                          className="text-gray-400 hover:text-white transition-colors text-sm"
+                        >
+                          Slack
+                        </a>
+                      </div>
+                    </div>
+                    <p className="text-gray-500 text-xs">
+                      © {new Date().getFullYear()} Parenthetical
+                    </p>
+                  </div>
+                </div>
               </SheetContent>
             </Sheet>
           </div>

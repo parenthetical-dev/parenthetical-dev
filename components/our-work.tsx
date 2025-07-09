@@ -54,9 +54,26 @@ export function OurWork() {
           </div>
 
           {/* Video */}
-          <div className="relative w-full aspect-video mb-10 bg-black rounded-xl overflow-hidden">
+          <div className="relative w-full mb-10 bg-black rounded-xl overflow-hidden">
+                {/* Mobile Video - Hidden on larger screens */}
                 <video
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover sm:hidden"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  onLoadedData={(e) => {
+                    const video = e.target as HTMLVideoElement;
+                    video.play().catch(console.error);
+                  }}
+                >
+                  <source src="/survivalpending_mobile.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                
+                {/* Desktop Video - Hidden on mobile */}
+                <video
+                  className="hidden sm:block w-full h-full object-cover"
                   autoPlay
                   loop
                   muted
@@ -116,7 +133,7 @@ export function OurWork() {
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-opacity duration-700 ease-in-out" />
               <div className="absolute -top-3 -left-3 w-20 h-20 bg-purple-500/20 rounded-full blur-2xl" />
               <div className="relative z-10">
-                <h4 className="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">The Brief</h4>
+                <h4 className="text-2xl sm:text-3xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">The Brief</h4>
                 <p className="text-gray-300 leading-relaxed text-lg">
                   Create a digital sanctuary where LGBTQ+ individuals could safely document their experiences during an unprecedented moment of social and political pressure. The platform needed to be anonymous, permanent, and powerful.
                 </p>
@@ -417,7 +434,10 @@ export function OurWork() {
             <h3 className="text-2xl font-bold mb-6 text-white text-center">How to Contribute</h3>
             <div className="space-y-4 text-gray-300 mb-12">
               <p className="leading-relaxed">
-                Start where you are. Fix a bug. Improve documentation. Suggest a feature that serves someone you care about. Challenge us when our code doesn't match our conscience. Our GitHub isn't just a repository—it's a space for reimagining what technology can be when it's built with intention. Every pull request is a chance to add your parenthetical—your essential truth—to this larger story we're writing together. We don't need more rockstar developers. We need ensemble players who understand that the best code is written in community.
+                Start where you are. Fix a bug. Improve documentation. Suggest a feature that serves someone you care about. Challenge us when our code doesn't match our conscience. Our GitHub isn't just a repository—it's a space for reimagining what technology can be when it's built with intention.
+              </p>
+              <p className="leading-relaxed">
+                Every pull request is a chance to add your parenthetical—your essential truth—to this larger story we're writing together. We don't need more rockstar developers. We need ensemble players who understand that the best code is written in community.
               </p>
             </div>
 
