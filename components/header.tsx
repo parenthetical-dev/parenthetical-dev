@@ -177,7 +177,9 @@ export function Header() {
                           GitHub
                         </a>
                         <a
-                          href="#"
+                          href="https://parentheticaldev.slack.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-gray-400 hover:text-white transition-colors text-sm"
                         >
                           Slack

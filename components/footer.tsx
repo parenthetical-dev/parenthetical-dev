@@ -55,7 +55,9 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://parentheticaldev.slack.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Slack
