@@ -27,12 +27,12 @@ export default function HomePage() {
     <main className="bg-black">
       <CustomScroll />
       <Header />
-      <div className="relative w-screen h-screen overflow-hidden">
+      <div className="relative w-screen h-[80vh] sm:h-[90vh] md:h-screen overflow-hidden">
         <Waves {...config} />
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
-          <div>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6 sm:px-8">
+          <div className="w-full max-w-4xl mx-auto">
             <Logo className="mb-4" />
-            <p className="text-2xl md:text-3xl font-light text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-2xl md:text-3xl font-light text-gray-200 leading-relaxed px-4 sm:px-0">
               Harnessing the power of artificial intelligence to build digital spaces where humanity thrives.
             </p>
           </div>

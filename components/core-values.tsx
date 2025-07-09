@@ -53,8 +53,8 @@ const itemVariants = {
 
 export function CoreValues() {
   return (
-    <section id="core-values" className="w-full py-20 md:py-32 bg-black text-white overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="core-values" className="w-full py-16 sm:py-20 md:py-32 bg-black text-white overflow-hidden">
+      <div className="container mx-auto px-6 sm:px-8 md:px-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -62,9 +62,9 @@ export function CoreValues() {
           viewport={{ once: true, amount: 0.3 }}
           className="max-w-3xl mx-auto text-center space-y-6 mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter">Our Core Values</h2>
-          <p className="text-xl md:text-2xl text-gray-400 font-semibold">Adding the essential context to every line of code.</p>
-          <p className="text-gray-300">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter">Our Core Values</h2>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-400 font-semibold">Adding the essential context to every line of code.</p>
+          <p className="text-base sm:text-lg text-gray-300">
             Just as parentheses hold the quiet truths that complete a sentence, we believe the most important work
             happens in the spaces between—where technology meets humanity, where innovation meets empathy, where
             progress meets purpose.
@@ -82,7 +82,7 @@ export function CoreValues() {
             <motion.div
               key={value.title}
               variants={itemVariants}
-              className="group relative bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-chartreuse/30 transition-all duration-300"
+              className="group relative bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 hover:border-chartreuse/30 transition-all duration-300"
               whileHover={{ scale: 1.02 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-chartreuse/5 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-700 ease-in-out" />
@@ -95,11 +95,11 @@ export function CoreValues() {
                   />
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-chartreuse transition-colors duration-300">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 group-hover:text-chartreuse transition-colors duration-300">
                   {value.title}
                 </h3>
                 
-                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                <p className="text-base sm:text-lg text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                   {value.description}
                 </p>
               </div>

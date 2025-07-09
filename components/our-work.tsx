@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import { motion } from "framer-motion"
 import { Logo as SPLogo } from "./sp-logo"
 
@@ -48,8 +49,8 @@ export function OurWork() {
         {/* Survival Pending Section */}
         <div className="max-w-6xl mx-auto py-10">
           <div className="text-center mb-16">
-            <SPLogo className="text-5xl md:text-6xl mb-4" />
-            <p className="text-2xl md:text-3xl text-gray-300">An anonymous archive for LGBTQ+ resilience</p>
+            <SPLogo className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4" />
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300">An anonymous archive for LGBTQ+ resilience</p>
           </div>
 
           {/* Video */}
