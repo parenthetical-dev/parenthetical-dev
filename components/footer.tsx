@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Logo } from "./logo"
 import Waves from "./Waves"
+import { ContactModal } from "./contact-modal"
 
 export function Footer() {
   const waveConfig = {
@@ -61,12 +62,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:hello@parenthetical.com"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Email
-                </a>
+                <ContactModal
+                  trigger={
+                    <button className="text-gray-400 hover:text-white transition-colors text-left">
+                      Get In Touch
+                    </button>
+                  }
+                />
               </li>
             </ul>
           </div>

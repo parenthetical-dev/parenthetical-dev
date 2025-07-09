@@ -11,6 +11,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Logo } from "./logo"
+import { ContactModal } from "./contact-modal"
 import { cn } from "@/lib/utils"
 
 export function Header() {
@@ -72,14 +73,15 @@ export function Header() {
                 <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-white/5 to-white/0 opacity-50 rounded-full" />
                 <span className="relative z-10">Contribute</span>
               </Link>
-              <Link
-                href="/contact"
-                className="group relative inline-flex items-center justify-center h-9 px-5 bg-purple-500/20 backdrop-blur-md border border-purple-500/50 text-purple-300 font-bold rounded-full hover:bg-purple-500/30 hover:border-purple-500/70 transition-all duration-300 hover:scale-105 shadow-xl"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-purple-500/5 rounded-full" />
-                <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-white/5 to-white/0 opacity-50 rounded-full" />
-                <span className="relative z-10">Get In Touch</span>
-              </Link>
+              <ContactModal
+                trigger={
+                  <button className="group relative inline-flex items-center justify-center h-9 px-5 bg-purple-500/20 backdrop-blur-md border border-purple-500/50 text-purple-300 font-bold rounded-full hover:bg-purple-500/30 hover:border-purple-500/70 transition-all duration-300 hover:scale-105 shadow-xl">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-purple-500/5 rounded-full" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-white/5 to-white/0 opacity-50 rounded-full" />
+                    <span className="relative z-10">Get In Touch</span>
+                  </button>
+                }
+              />
             </div>
           </div>
         </div>
