@@ -43,7 +43,7 @@ export function Header() {
                     <NavigationMenuLink
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        "bg-transparent text-white hover:text-chartreuse hover:bg-transparent focus:bg-transparent focus:text-chartreuse",
+                        "bg-transparent text-white hover:text-chartreuse hover:bg-transparent",
                       )}
                     >
                       Home
@@ -55,7 +55,7 @@ export function Header() {
                     <NavigationMenuLink
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        "bg-transparent text-white hover:text-chartreuse hover:bg-transparent focus:bg-transparent focus:text-chartreuse",
+                        "bg-transparent text-white hover:text-chartreuse hover:bg-transparent",
                       )}
                     >
                       Our Work
@@ -67,7 +67,7 @@ export function Header() {
                     <NavigationMenuLink
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        "bg-transparent text-white hover:text-chartreuse hover:bg-transparent focus:bg-transparent focus:text-chartreuse",
+                        "bg-transparent text-white hover:text-chartreuse hover:bg-transparent",
                       )}
                     >
                       About Us
@@ -208,7 +208,7 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWit
           <a
             ref={ref}
             className={cn(
-              "flex w-full flex-col space-y-1 rounded-md p-3 no-underline outline-none transition-colors hover:bg-white/10 focus:bg-white/10",
+              "flex w-full flex-col space-y-1 rounded-md p-3 no-underline outline-none transition-colors hover:bg-white/10",
               className,
             )}
             {...props}

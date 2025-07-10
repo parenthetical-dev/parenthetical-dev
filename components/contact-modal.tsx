@@ -87,7 +87,7 @@ export function ContactModal({ subject = "Contact Inquiry", trigger }: ContactMo
               value={formData.name}
               onChange={handleInputChange}
               required
-              className="bg-black/50 border-chartreuse/30 text-white placeholder:text-gray-500 focus:border-chartreuse/60"
+              className="bg-black/50 border-chartreuse/30 text-white placeholder:text-gray-500 outline-none"
             />
           </div>
           <div className="space-y-2">
@@ -100,7 +100,7 @@ export function ContactModal({ subject = "Contact Inquiry", trigger }: ContactMo
               value={formData.email}
               onChange={handleInputChange}
               required
-              className="bg-black/50 border-chartreuse/30 text-white placeholder:text-gray-500 focus:border-chartreuse/60"
+              className="bg-black/50 border-chartreuse/30 text-white placeholder:text-gray-500 outline-none"
             />
           </div>
           <div className="space-y-2">
@@ -115,7 +115,7 @@ export function ContactModal({ subject = "Contact Inquiry", trigger }: ContactMo
                 }
               }}
             >
-              <SelectTrigger className="bg-black/50 border-chartreuse/30 text-white focus:border-chartreuse/60">
+              <SelectTrigger className="bg-black/50 border-chartreuse/30 text-white outline-none">
                 <SelectValue placeholder="Select inquiry type" />
               </SelectTrigger>
               <SelectContent className="bg-black border-chartreuse/30">
@@ -136,7 +136,7 @@ export function ContactModal({ subject = "Contact Inquiry", trigger }: ContactMo
               value={formData.subject}
               onChange={handleInputChange}
               required
-              className="bg-black/50 border-chartreuse/30 text-white placeholder:text-gray-500 focus:border-chartreuse/60"
+              className="bg-black/50 border-chartreuse/30 text-white placeholder:text-gray-500 outline-none"
             />
           </div>
           <div className="space-y-2">
@@ -147,7 +147,7 @@ export function ContactModal({ subject = "Contact Inquiry", trigger }: ContactMo
               placeholder="Acme Inc."
               value={formData.company}
               onChange={handleInputChange}
-              className="bg-black/50 border-chartreuse/30 text-white placeholder:text-gray-500 focus:border-chartreuse/60"
+              className="bg-black/50 border-chartreuse/30 text-white placeholder:text-gray-500 outline-none"
             />
           </div>
           <div className="space-y-2">
@@ -159,7 +159,7 @@ export function ContactModal({ subject = "Contact Inquiry", trigger }: ContactMo
               placeholder="+1 (555) 123-4567"
               value={formData.phone}
               onChange={handleInputChange}
-              className="bg-black/50 border-chartreuse/30 text-white placeholder:text-gray-500 focus:border-chartreuse/60"
+              className="bg-black/50 border-chartreuse/30 text-white placeholder:text-gray-500 outline-none"
             />
           </div>
           <div className="space-y-2">
@@ -168,7 +168,7 @@ export function ContactModal({ subject = "Contact Inquiry", trigger }: ContactMo
               id="message"
               name="message"
               placeholder="Tell us about your project..."
-              className="min-h-[100px] bg-black/50 border-chartreuse/30 text-white placeholder:text-gray-500 focus:border-chartreuse/60"
+              className="min-h-[100px] bg-black/50 border-chartreuse/30 text-white placeholder:text-gray-500 outline-none"
               value={formData.message}
               onChange={handleInputChange}
               required

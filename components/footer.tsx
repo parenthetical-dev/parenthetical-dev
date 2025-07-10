@@ -35,7 +35,7 @@ export function Footer() {
               <Logo size="sm" className="text-2xl" />
             </div>
             <p className="text-gray-400 max-w-sm">
-              Adding the essential context to every line of code. Building platforms that center marginalized voices and transform personal narratives into collective power.
+              Building platforms that center marginalized voices and transform personal narratives into collective power.
             </p>
           </div>
 
