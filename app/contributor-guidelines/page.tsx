@@ -350,7 +350,7 @@ export default function ContributorGuidelines() {
                   <li>• Check if the bug already exists in issues</li>
                   <li>• Create a detailed bug report using our template</li>
                   <li>• Include context about how this bug might impact users</li>
-                  <li>• Security issues? Email <span className="text-red-400">security@parenthetical.dev</span></li>
+                  <li>• Security vulnerabilities? Use <span className="text-red-400">GitHub Security Advisories</span> to report privately</li>
                 </ul>
               </motion.div>
 

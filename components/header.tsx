@@ -63,7 +63,7 @@ export function Header() {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="/about" legacyBehavior passHref>
+                  <Link href="/about-parenthetical" legacyBehavior passHref>
                     <NavigationMenuLink
                       className={cn(
                         navigationMenuTriggerStyle(),
@@ -137,7 +137,7 @@ export function Header() {
                     Our Work
                   </Link>
                   <Link
-                    href="/about"
+                    href="/about-parenthetical"
                     onClick={() => setIsOpen(false)}
                     className="text-white hover:text-chartreuse transition-colors text-base py-2"
                   >
