@@ -1,11 +1,13 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { CustomScroll } from "@/components/custom-scroll"
 import { DevContactModal } from "@/components/dev-contact-modal"
 import { ContactModal } from "@/components/contact-modal"
+import { Logo as SPLogo } from "@/components/sp-logo"
 import { 
   Sparkles,
   Code,
@@ -213,8 +215,18 @@ export default function AboutParenthetical() {
             className="max-w-6xl mx-auto"
           >
             <div className="bg-gradient-to-br from-chartreuse/20 to-gray-900 border border-chartreuse/20 rounded-3xl p-10 md:p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Parenthetical's Founder: Josh Weaver</h2>
-              <div className="space-y-4 text-gray-300 leading-relaxed">
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                <Image 
+                  src="/joshweavericon.jpg" 
+                  alt="Josh Weaver" 
+                  width={150} 
+                  height={150} 
+                  className="rounded-full flex-shrink-0"
+                  style={{ borderRadius: '100px' }}
+                />
+                <div className="flex-1">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Parenthetical's Founder: Josh Weaver</h2>
+                  <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
                   Josh's journey spans from directing campaigns at VICE Media to revolutionizing nonprofit marketing as VP of Marketing at The Trevor Project. There, they pioneered a radical shift: celebrating LGBTQ+ youth before they need saving, focusing on joy and prevention rather than crisis response.
                 </p>
@@ -233,6 +245,8 @@ export default function AboutParenthetical() {
                   Learn more about Josh
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -247,15 +261,120 @@ export default function AboutParenthetical() {
             {...fadeInAnimation}
             className="max-w-6xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Current Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">Current Projects</h2>
+            <p className="text-xl text-gray-400 text-center mb-16">Innovation powered by AI. Impact driven by empathy.</p>
             
-            <div className="bg-gradient-to-br from-pink-900/20 to-gray-900 border border-pink-500/20 rounded-2xl p-8">
-              <p className="text-gray-300 mb-4">
-                <span className="font-semibold text-pink-300">Survival Pending</span> exemplifies our integrated approach: a platform that combines powerful storytelling with secure, anonymous technology to preserve LGBTQ+ resilience narratives. It's not just a database—it's a digital sanctuary. Not just a website—it's a movement.
-              </p>
-              <p className="text-gray-300">
-                More initiatives launching soon, each blending strategic communication with technical innovation to serve communities that deserve better than one-dimensional solutions.
-              </p>
+            {/* Survival Pending Project */}
+            <div className="mb-16">
+              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl p-8 md:p-12">
+                <div className="mb-12">
+                  <SPLogo className="text-3xl sm:text-4xl md:text-5xl mb-4 text-white" />
+                  <p className="text-lg sm:text-xl md:text-2xl text-gray-300">An anonymous archive for LGBTQ+ resilience</p>
+                </div>
+
+                {/* Project Details Grid */}
+                <div className="space-y-6">
+                {/* The Brief */}
+                <motion.div
+                  {...fadeInAnimation}
+                  transition={{ delay: 0.2 }}
+                  className="group relative bg-gradient-to-br from-purple-900/20 to-gray-900 border border-purple-500/20 rounded-3xl p-8 hover:border-purple-400/40 transition-all duration-500"
+                >
+                  <h4 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent">The Brief</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Create a digital sanctuary where LGBTQ+ individuals could safely document their experiences during an unprecedented moment of social and political pressure. The platform needed to be anonymous, permanent, and powerful.
+                  </p>
+                </motion.div>
+
+                {/* The Solution */}
+                <motion.div
+                  {...fadeInAnimation}
+                  transition={{ delay: 0.3 }}
+                  className="group relative bg-gradient-to-br from-chartreuse/20 to-gray-900 border border-chartreuse/20 rounded-3xl p-8 hover:border-chartreuse/40 transition-all duration-500"
+                >
+                  <h4 className="text-2xl font-bold mb-4 text-chartreuse">The Solution</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    A secure, anonymous platform that transforms personal stories into collective power. Using blockchain verification for permanence and AI-powered moderation for safety, Survival Pending creates an unalterable record of LGBTQ+ resilience while protecting contributor identities.
+                  </p>
+                </motion.div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                  <a 
+                    href="https://survivalpending.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="group relative inline-flex items-center justify-center px-8 py-3 bg-chartreuse/20 backdrop-blur-md border border-chartreuse/50 text-chartreuse font-semibold rounded-xl hover:bg-chartreuse/30 hover:border-chartreuse/70 transition-all duration-300 hover:scale-105 shadow-xl"
+                  >
+                    <span className="relative z-10 flex items-center">
+                      Visit Live Site
+                      <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </span>
+                  </a>
+                  <a 
+                    href="/survival-pending" 
+                    className="group relative inline-flex items-center justify-center px-8 py-3 bg-gradient-to-br from-gray-700/50 to-gray-800/50 backdrop-blur-sm border border-gray-600 text-gray-300 font-semibold rounded-xl hover:from-gray-600/50 hover:to-gray-700/50 hover:text-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
+                  >
+                    <span className="relative z-10 flex items-center">
+                      View Case Study
+                      <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              </div>
+
+              {/* Upcoming Projects */}
+              <div className="mt-20">
+                <h3 className="text-2xl font-bold text-white mb-8 text-center">More Projects Coming Soon</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Project 1 Skeleton */}
+                  <motion.div
+                    {...fadeInAnimation}
+                    transition={{ delay: 0.4 }}
+                    className="relative bg-gradient-to-br from-gray-800/30 to-gray-900 border border-gray-700 rounded-2xl p-8 overflow-hidden"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-gray-700/10 via-transparent to-transparent opacity-50" />
+                    <div className="relative z-10">
+                      <div className="h-8 w-48 bg-gray-700/50 rounded-lg mb-4 animate-pulse" />
+                      <div className="space-y-3">
+                        <div className="h-4 w-full bg-gray-700/30 rounded animate-pulse" />
+                        <div className="h-4 w-5/6 bg-gray-700/30 rounded animate-pulse" />
+                        <div className="h-4 w-4/6 bg-gray-700/30 rounded animate-pulse" />
+                      </div>
+                      <div className="mt-6 flex gap-3">
+                        <div className="h-3 w-20 bg-gray-700/30 rounded-full animate-pulse" />
+                        <div className="h-3 w-24 bg-gray-700/30 rounded-full animate-pulse" />
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Project 2 Skeleton */}
+                  <motion.div
+                    {...fadeInAnimation}
+                    transition={{ delay: 0.5 }}
+                    className="relative bg-gradient-to-br from-gray-800/30 to-gray-900 border border-gray-700 rounded-2xl p-8 overflow-hidden"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-gray-700/10 via-transparent to-transparent opacity-50" />
+                    <div className="relative z-10">
+                      <div className="h-8 w-40 bg-gray-700/50 rounded-lg mb-4 animate-pulse" />
+                      <div className="space-y-3">
+                        <div className="h-4 w-full bg-gray-700/30 rounded animate-pulse" />
+                        <div className="h-4 w-4/5 bg-gray-700/30 rounded animate-pulse" />
+                        <div className="h-4 w-3/6 bg-gray-700/30 rounded animate-pulse" />
+                      </div>
+                      <div className="mt-6 flex gap-3">
+                        <div className="h-3 w-16 bg-gray-700/30 rounded-full animate-pulse" />
+                        <div className="h-3 w-28 bg-gray-700/30 rounded-full animate-pulse" />
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
