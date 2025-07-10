@@ -54,12 +54,25 @@ export default function ContributorGuidelines() {
       <CustomScroll />
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative w-full pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden">
-        <div className="container mx-auto px-4 md:px-6">
+      {/* Hero Section - Full VH */}
+      <section className="relative w-full min-h-screen flex flex-col overflow-hidden">
+        {/* Animated Gradient Background */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 bg-gradient-to-br from-chartreuse/20 via-transparent to-chartreuse/10 animate-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-tl from-chartreuse/15 via-transparent to-chartreuse/5 animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-chartreuse/10 to-transparent animate-[slide_8s_ease-in-out_infinite]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-chartreuse/5 to-transparent animate-[slideVertical_10s_ease-in-out_infinite]" />
+        </div>
+        
+        {/* Gradient Orbs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-chartreuse/10 rounded-full blur-3xl animate-[float_20s_ease-in-out_infinite]" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chartreuse/10 rounded-full blur-3xl animate-[float_20s_ease-in-out_infinite_reverse]" style={{ animationDelay: '10s' }} />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-chartreuse/5 rounded-full blur-3xl animate-pulse" />
+        {/* Hero Content */}
+        <div className="container mx-auto px-4 md:px-6 pt-32 md:pt-40 flex-grow flex flex-col justify-center">
           <motion.div
             {...fadeInAnimation}
-            className="max-w-4xl mx-auto text-center space-y-6 pt-16 md:pt-20"
+            className="max-w-4xl mx-auto text-center space-y-6 mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold tracking-tighter text-white">
               Contributor Guidelines
@@ -68,15 +81,11 @@ export default function ContributorGuidelines() {
               Welcome to the margins—where the most important work happens.
             </p>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Our Commitment Section */}
-      <section className="w-full pt-8 pb-16 md:pt-12 md:pb-20">
-        <div className="container mx-auto px-4 md:px-6">
+          
+          {/* Our Commitment Section */}
           <motion.div
             {...fadeInAnimation}
-            className="max-w-6xl mx-auto"
+            className="max-w-6xl mx-auto w-full pb-16"
           >
             <div className="bg-gradient-to-br from-purple-900/20 to-gray-900 border border-purple-500/20 rounded-3xl p-10 md:p-12">
               <div className="flex items-start gap-4 mb-6">
@@ -514,7 +523,7 @@ export default function ContributorGuidelines() {
       </div>
 
       {/* Review Process */}
-      <section className="w-full py-16 md:py-20">
+      <section className="w-full pt-16 pb-8 md:pt-20 md:pb-10">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             {...fadeInAnimation}

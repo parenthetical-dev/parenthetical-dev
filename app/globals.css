@@ -112,3 +112,36 @@
     border-color: rgb(75 85 99) !important;
   }
 }
+
+@keyframes slide {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideVertical {
+  0%, 100% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(100px, -100px) scale(1.1);
+  }
+  50% {
+    transform: translate(-100px, -200px) scale(0.9);
+  }
+  75% {
+    transform: translate(-200px, 100px) scale(1.05);
+  }
+}
