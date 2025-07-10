@@ -5,6 +5,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { CustomScroll } from "@/components/custom-scroll"
 import { DevContactModal } from "@/components/dev-contact-modal"
+import { ContactModal } from "@/components/contact-modal"
 import { 
   Sparkles,
   Code,
@@ -438,12 +439,22 @@ export default function AboutParenthetical() {
                 <span className="relative z-10">Explore Our Work</span>
               </a>
               
-              <DevContactModal
+              <ContactModal
                 trigger={
                   <button className="group relative inline-flex items-center justify-center px-8 py-4 bg-chartreuse/20 backdrop-blur-md border border-chartreuse/50 text-chartreuse font-semibold rounded-xl hover:bg-chartreuse/30 hover:border-chartreuse/70 transition-all duration-300 hover:scale-105 shadow-xl">
                     <div className="absolute inset-0 bg-gradient-to-br from-chartreuse/10 via-transparent to-chartreuse/5 rounded-xl" />
                     <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-white/5 to-white/0 opacity-50" />
                     <span className="relative z-10">Start a Conversation</span>
+                  </button>
+                }
+              />
+              
+              <DevContactModal
+                trigger={
+                  <button className="group relative inline-flex items-center justify-center px-8 py-4 bg-pink-500/20 backdrop-blur-md border border-pink-500/50 text-pink-300 font-semibold rounded-xl hover:bg-pink-500/30 hover:border-pink-500/70 transition-all duration-300 hover:scale-105 shadow-xl">
+                    <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 via-transparent to-pink-500/5 rounded-xl" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-white/5 to-white/0 opacity-50" />
+                    <span className="relative z-10">Apply to Contribute</span>
                   </button>
                 }
               />
