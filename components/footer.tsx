@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Logo } from "./logo"
 import Waves from "./Waves"
 import { ContactModal } from "./contact-modal"
+import { DevContactModal } from "./dev-contact-modal"
 
 export function Footer() {
   const waveConfig = {
@@ -54,14 +55,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://parentheticaldev.slack.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Slack
-                </a>
+                <DevContactModal
+                  trigger={
+                    <button className="text-gray-400 hover:text-white transition-colors text-left">
+                      Apply to Contribute
+                    </button>
+                  }
+                />
               </li>
               <li>
                 <ContactModal
@@ -96,12 +96,12 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/contributor-guidelines"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Contributor Guidelines
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
