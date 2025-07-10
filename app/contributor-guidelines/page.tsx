@@ -55,7 +55,7 @@ export default function ContributorGuidelines() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative w-full pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden">
+      <section className="relative w-full pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             {...fadeInAnimation}
@@ -72,7 +72,7 @@ export default function ContributorGuidelines() {
       </section>
 
       {/* Our Commitment Section */}
-      <section className="w-full py-16 md:py-20">
+      <section className="w-full pt-8 pb-16 md:pt-12 md:pb-20">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div
             {...fadeInAnimation}
