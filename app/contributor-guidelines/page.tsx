@@ -343,7 +343,7 @@ export default function ContributorGuidelines() {
               >
                 <h3 className="text-2xl font-bold text-red-300 mb-4 flex items-center gap-3">
                   <Bug className="w-6 h-6" />
-                  🐛 Reporting Bugs
+                  Reporting Bugs
                 </h3>
                 <p className="text-gray-300 mb-4">Found something broken? You're helping us build better.</p>
                 <ul className="space-y-2 text-gray-400">
@@ -361,7 +361,7 @@ export default function ContributorGuidelines() {
               >
                 <h3 className="text-2xl font-bold text-blue-300 mb-4 flex items-center gap-3">
                   <Lightbulb className="w-6 h-6" />
-                  💡 Suggesting Features
+                  Suggesting Features
                 </h3>
                 <p className="text-gray-300 mb-4">Have an idea that could serve our communities better?</p>
                 <ul className="space-y-2 text-gray-400">
@@ -379,7 +379,7 @@ export default function ContributorGuidelines() {
               >
                 <h3 className="text-2xl font-bold text-green-300 mb-4 flex items-center gap-3">
                   <FileText className="w-6 h-6" />
-                  📝 Improving Documentation
+                  Improving Documentation
                 </h3>
                 <p className="text-gray-300 mb-4">Documentation is how we show care for future contributors.</p>
                 <ul className="space-y-2 text-gray-400">
@@ -397,7 +397,7 @@ export default function ContributorGuidelines() {
               >
                 <h3 className="text-2xl font-bold text-purple-300 mb-4 flex items-center gap-3">
                   <Code className="w-6 h-6" />
-                  💻 Contributing Code
+                  Contributing Code
                 </h3>
                 
                 <div className="space-y-6">
@@ -562,15 +562,15 @@ export default function ContributorGuidelines() {
                 <h3 className="text-xl font-bold text-green-300 mb-4">Timeline:</h3>
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start gap-2">
-                    <span className="text-green-400 mt-1">⏱</span>
+                    <span className="text-green-400 mt-1">•</span>
                     <span>We aim to respond to all PRs within 72 hours</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-green-400 mt-1">💬</span>
+                    <span className="text-green-400 mt-1">•</span>
                     <span>Reviews might include suggestions, questions, or requests for changes</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-green-400 mt-1">🎉</span>
+                    <span className="text-green-400 mt-1">•</span>
                     <span>We celebrate iteration—perfect is the enemy of good enough to help someone</span>
                   </li>
                 </ul>
