@@ -1,4 +1,4 @@
-# Parenthetical
+# Parenthetical Website
 
 Official website for Parenthetical - a multidisciplinary agency at the intersection of marketing and technology. We harness the power of AI to create digital spaces where humanity thrives.
 
@@ -137,7 +137,14 @@ The site is optimized for deployment on Vercel:
 
 ## License
 
-[Add your license information here]
+This project is licensed under the MIT License with additional restrictions - see the [LICENSE](LICENSE) file for details.
+
+**Key Points:**
+- ✅ You may use this code for your own individual projects
+- ✅ You may modify and distribute the layout and web functions
+- ❌ You may NOT use this to imitate or compete with Parenthetical
+- ❌ You may NOT use the Parenthetical name or brand
+- ❌ Usage must align with our core values and contributor guidelines
 
 ## Contact
 
